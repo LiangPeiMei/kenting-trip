@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🙏恆春墾丁三日遊🙏早安大吉大利✨</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+KuaiLe&family=Noto+Sans+TC:wght@400;700;900&display=swap');
+
+:root{
+  --neon-pink:#FF2D9C;
+  --neon-yellow:#FFEA00;
+  --neon-cyan:#00E5D0;
+  --neon-orange:#FF8A00;
+}
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:'Noto Sans TC', 'Comic Sans MS', sans-serif;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(0,229,208,.35), transparent 50%),
+    radial-gradient(circle at 85% 85%, rgba(255,45,156,.3), transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(255,234,0,.15), transparent 60%),
+    linear-gradient(160deg,#050d1a,#0a1f3d 30%,#1a0a3d 60%,#050d1a);
+  background-size:200% 200%;
+  animation:bgshift 12s ease infinite;
+  color:#fff;
+  overflow-x:hidden;
+}
+@keyframes bgshift{
+  0%,100%{background-position:0% 0%;}
+  50%{background-position:100% 100%;}
+}
+
+.stars{position:fixed; inset:0; pointer-events:none; z-index:0;}
+.star{position:absolute; animation:twinkle 1.6s ease-in-out infinite; filter:drop-shadow(0 0 6px #fff);}
+@keyframes twinkle{0%,100%{opacity:.2; transform:scale(.7) rotate(0deg);} 50%{opacity:1; transform:scale(1.3) rotate(20deg);}}
+
+marquee{
+  background:linear-gradient(90deg,#FF2D9C,#FFEA00,#00E5D0,#FF2D9C);
+  background-size:300% 100%;
+  animation:rainbow 4s linear infinite;
+  color:#fff;
+  font-family:'ZCOOL KuaiLe', sans-serif;
+  font-size:16px;
+  padding:8px 0;
+  border-top:3px dashed #fff;
+  border-bottom:3px dashed #fff;
+  font-weight:700;
+}
+@keyframes rainbow{0%{background-position:0% 0;} 100%{background-position:100% 0;}}
+
+.wrap{position:relative; z-index:1; max-width:640px; margin:0 auto; padding:20px 18px 40px;}
+
+.hero{text-align:center; margin:20px 0 26px; position:relative;}
+.hero .pre{
+  font-family:'ZCOOL KuaiLe', sans-serif;
+  font-size:15px;
+  color:#fff;
+  margin-bottom:4px;
+}
+.hero .pre .blink{animation:blink 1s step-start infinite;}
+@keyframes blink{50%{opacity:0;}}
+
+.hero h1{
+  font-family:'ZCOOL KuaiLe', sans-serif;
+  font-size:clamp(30px,9vw,46px);
+  margin:6px 0;
+  background:linear-gradient(90deg,#FF2D9C,#FFEA00,#00E5D0,#FF8A00,#FF2D9C);
+  background-size:400% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:rainbow 3s linear infinite;
+  text-shadow:0 0 18px rgba(255,255,255,.35);
+  letter-spacing:.03em;
+}
+
+.hero .big{
+  font-family:'ZCOOL KuaiLe', sans-serif;
+  font-size:clamp(50px,15vw,80px);
+  color:#fff;
+  -webkit-text-stroke:3px var(--neon-pink);
+  text-shadow:0 0 6px var(--neon-pink),0 0 20px var(--neon-pink),0 0 40px rgba(255,45,156,.7);
+  margin:4px 0 10px;
+  animation:pulse 1.4s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{transform:scale(1);} 50%{transform:scale(1.06);}}
+
+.emoji-row{font-size:26px; letter-spacing:6px; margin:8px 0; animation:float 2s ease-in-out infinite;}
+@keyframes float{0%,100%{transform:translateY(0);} 50%{transform:translateY(-6px);}}
+
+.hero .sub{
+  font-size:13px;
+  color:#FFF7C2;
+  line-height:1.9;
+  background:rgba(255,255,255,.08);
+  border:2px dashed var(--neon-yellow);
+  border-radius:14px;
+  padding:10px 16px;
+  display:inline-block;
+  font-family:'ZCOOL KuaiLe', sans-serif;
+}
+
+.stamp{
+  position:absolute;
+  top:-6px;
+  right:6px;
+  width:70px; height:70px;
+  border:3px solid var(--neon-orange);
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  transform:rotate(18deg);
+  color:var(--neon-orange);
+  font-family:'ZCOOL KuaiLe', sans-serif;
+  font-size:13px;
+  text-align:center;
+  line-height:1.2;
+  background:rgba(255,138,0,.08);
+  animation:wobble 2.5s ease-in-out infinite;
+}
+@keyframes wobble{0%,100%{transform:rotate(18deg) scale(1);} 50%{transform:rotate(24deg) scale(1.08);}}
+
+.date-row{display:flex; justify-content:center; gap:8px; margin-top:16px; flex-wrap:wrap;}
+.date-pill{
+  font-family:'ZCOOL KuaiLe', sans-serif;
+  font-size:12.5px;
+  background:linear-gradient(135deg, rgba(0,229,208,.3), rgba(255,45,156,.3));
+  border:2px solid #fff;
+  padding:6px 14px;
+  border-radius:999px;
+}
+
+.day{
+  margin-top:32px;
+  border-radius:20px;
+  padding:3px;
+  background:linear-gradient(135deg, var(--neon-cyan), var(--neon-pink), var(--neon-yellow), var(--neon-orange));
+  background-size:300% 300%;
+  animation:rainbow 5s linear infinite;
+}
+.day-inner{
+  background:linear-gradient(180deg, rgba(8,15,30,.95), rgba(5,8,20,.98));
+  border-radius:17px;
+  padding:20px 18px 24px;
+  position:relative;
+}
+.day-title{display:flex; align-items:center; gap:8px; margin-bottom:4px; flex-wrap:wrap;}
+.day-title h2{
+  font-family:'ZCOOL KuaiLe', sans-serif;
+  font-size:22px;
+  margin:0;
+  color:var(--neon-yellow);
+  text-shadow:0 0 10px rgba(255,234,0,.7);
+}
+.day-title .date{font-family:'ZCOOL KuaiLe',sans-serif; font-size:12px; color:#9FEFE3; margin-left:auto;}
+.day-desc{font-size:12.5px; color:#BFE9E2; margin:0 0 14px;}
+
+.stop{
+  background:rgba(255,255,255,.06);
+  border:2px dashed rgba(255,255,255,.35);
+  border-radius:12px;
+  padding:12px 14px;
+  margin-bottom:10px;
+  position:relative;
+}
+.stop.new::before{
+  content:'✨新增✨';
+  position:absolute;
+  top:-12px; left:10px;
+  background:var(--neon-pink);
+  font-size:10px;
+  padding:2px 8px;
+  border-radius:999px;
+  font-family:'ZCOOL KuaiLe', sans-serif;
+  animation:blink 1.2s step-start infinite;
+}
+.stop-top{display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+.stop-top .ic{font-size:18px;}
+.stop-name{font-family:'Noto Sans TC'; font-weight:700; font-size:15px; margin:0;}
+.badge{
+  font-size:10.5px; padding:2px 9px; border-radius:999px;
+  background:rgba(255,45,156,.25); color:#FFC2DE; border:1px solid var(--neon-pink);
+  font-family:'ZCOOL KuaiLe', sans-serif;
+}
+.stop-meta{margin-top:6px; font-size:12px; color:#A9D8D1; display:flex; gap:5px 12px; flex-wrap:wrap;}
+.stop-links{margin-top:8px; display:flex; gap:8px; flex-wrap:wrap;}
+.stop-links a{
+  font-size:11.5px; font-weight:700; color:#111;
+  background:linear-gradient(135deg, var(--neon-yellow), #fff2a8);
+  padding:5px 12px; border-radius:999px; text-decoration:none;
+}
+.backup-label{font-size:11px; color:#9FEFE3; margin:6px 0 8px; font-family:'ZCOOL KuaiLe', sans-serif;}
+.backup-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:8px;}
+.backup-item{background:rgba(255,255,255,.06); border:1px dashed rgba(255,255,255,.3); border-radius:10px; padding:8px 10px; font-size:12px;}
+.backup-item .name{font-weight:700; display:block; margin-bottom:2px;}
+.backup-item .hours{color:#9FEFE3; font-size:11px; display:block; margin-bottom:6px;}
+.backup-item a{font-size:11px; font-weight:700; color:#111; background:var(--neon-cyan); padding:3px 9px; border-radius:999px; text-decoration:none;}
+
+.gif-flowers{
+  font-size:22px;
+  text-align:center;
+  margin:18px 0;
+  letter-spacing:10px;
+  animation:float 1.8s ease-in-out infinite;
+}
+
+footer{
+  position:relative; z-index:1; text-align:center; padding:30px 18px 40px;
+}
+footer .l1{font-family:'ZCOOL KuaiLe',sans-serif; font-size:16px; margin-bottom:10px;}
+footer .badge-logo{
+  display:inline-block; font-family:'ZCOOL KuaiLe',sans-serif; font-size:24px;
+  background:linear-gradient(90deg,#FF2D9C,#FFEA00,#00E5D0);
+  background-size:300% 100%; animation:rainbow 3s linear infinite;
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+  border:3px double #fff; padding:6px 20px; border-radius:12px;
+}
+footer .warn{
+  margin-top:16px; font-size:11px; color:#FFEA00; font-family:'ZCOOL KuaiLe',sans-serif;
+  animation:blink 1.5s step-start infinite;
+}
+</style>
+</head>
+<body>
+
+<marquee scrollamount="6">🙏 早安 感恩的心 感謝有你 呷飽沒 記得防曬多喝水 出門在外互相照顧 🌺 大吉大利 事事順心 🙏 分享出去 好運旺旺來 ✨</marquee>
+
+<div class="stars" id="stars"></div>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="stamp">大吉<br>大利</div>
+    <div class="pre">👉 願 你 擁 有 <span class="blink">👈</span></div>
+    <h1>寧靜與美好の旅程</h1>
+    <div class="big">早安</div>
+    <div class="emoji-row">🌸✨🙏✨🌸</div>
+    <div class="sub">恆春墾丁三日食光路線<br>台菜🥢生魚片🍣漁夫料理🦪茶壺雞🍲<br>呷好呷滿 一路平安</div>
+
+    <div class="date-row">
+      <span class="date-pill">🌞07.17 五</span>
+      <span class="date-pill">🌞07.18 六</span>
+      <span class="date-pill">🌞07.19 日</span>
+    </div>
+  </div>
+
+  <div class="gif-flowers">🌺🌼🌸🌼🌺🌼🌸🌼🌺</div>
+
+  <!-- DAY 1 -->
+  <div class="day">
+    <div class="day-inner">
+      <div class="day-title">
+        <span>🌅</span><h2>Day 1・出發集合囉！</h2><span class="date">07.17 五</span>
+      </div>
+      <p class="day-desc">集合 → 台菜開場 → 入住 → 晚餐備案</p>
+
+      <div class="stop new">
+        <div class="stop-top"><span class="ic">🙏</span><p class="stop-name">車城福安宮集合</p><span class="badge">12:00 準時</span></div>
+        <div class="stop-meta"><span>拜個平安再出發 🍊 不要遲到喔～</span></div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-top"><span class="ic">🍽️</span><p class="stop-name">虎炊稻 Höo Triptown 臺菜沙龍</p><span class="badge">已預約 13:50</span></div>
+        <div class="stop-links">
+          <a href="https://happytravel.tw/hoo-triptown/" target="_blank" rel="noopener">店家介紹 ✦</a>
+          <a href="https://inline.app/reservations/-OwH1lgbms3AvGCiitrp?utm_source=line-oa-inline&utm_medium=push" target="_blank" rel="noopener">菜單／訂位 ✦</a>
+        </div>
+        <div class="backup-label">附近停車場 🅿️</div>
+        <div class="backup-grid">
+          <div class="backup-item"><span class="name">恆春西門俥亭停車場</span><a href="https://maps.app.goo.gl/FZPjQNqff4Trj8ie6" target="_blank" rel="noopener">地圖</a></div>
+          <div class="backup-item"><span class="name">墾丁假期飯店停車場</span><a href="https://maps.app.goo.gl/2o1sqtajh2S5BK7Y6" target="_blank" rel="noopener">地圖</a></div>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-top"><span class="ic">🏠</span><p class="stop-name">民宿</p></div>
+        <div class="stop-meta"><span>⏰ 15:00 入住</span></div>
+        <div class="stop-links"><a href="https://maps.app.goo.gl/FxR1iHotidY5h78i9?g_st=il" target="_blank" rel="noopener">地圖 ✦</a></div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-top"><span class="ic">🍜</span><p class="stop-name">晚餐備案</p></div>
+        <div class="backup-label">選一家吃冬粉鴨 別客氣 🙏</div>
+        <div class="backup-grid">
+          <div class="backup-item"><span class="name">鄉村冬粉鴨</span><span class="hours">11:30–21:00</span><a href="https://maps.app.goo.gl/NS7oaxeweNsEENjW8" target="_blank" rel="noopener">地圖</a></div>
+          <div class="backup-item"><span class="name">夥計鴨肉冬粉</span><span class="hours">17:00–22:00</span><a href="https://maps.app.goo.gl/jEAc6Ty4Ys4Mr3zY6" target="_blank" rel="noopener">地圖</a></div>
+          <div class="backup-item"><span class="name">烤100分炭烤</span><span class="hours">18:00–23:30</span><a href="https://maps.app.goo.gl/zKccgDuU8nYskhq8A" target="_blank" rel="noopener">地圖</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="gif-flowers">💐🌻💐🌻💐🌻💐</div>
+
+  <!-- DAY 2 -->
+  <div class="day">
+    <div class="day-inner">
+      <div class="day-title">
+        <span>🌊</span><h2>Day 2・曬海吃海</h2><span class="date">07.18 六</span>
+      </div>
+      <p class="day-desc">生魚片 → 南灣 → 漁夫晚宴</p>
+
+      <div class="stop">
+        <div class="stop-top"><span class="ic">🍣</span><p class="stop-name">阿興生魚片</p></div>
+        <div class="stop-links"><a href="https://goo.gl/maps/RpDyhHsAoi3SQ3vu8" target="_blank" rel="noopener">地圖 ✦</a></div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-top"><span class="ic">🏖️</span><p class="stop-name">南灣</p></div>
+        <div class="stop-meta"><span>曬太陽 玩水 防曬記得補喔 ☀️</span></div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-top"><span class="ic">🦪</span><p class="stop-name">南風漁夫</p><span class="badge">已預約 18:30</span></div>
+        <div class="stop-meta"><span>📍 屏東縣恆春鎮城西里福德路88號</span></div>
+        <div class="stop-links"><a href="https://www.instagram.com/p/DYx23ZPSS79/" target="_blank" rel="noopener">Instagram ✦</a></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="gif-flowers">🌷🌼🌷🌼🌷🌼🌷</div>
+
+  <!-- DAY 3 -->
+  <div class="day">
+    <div class="day-inner">
+      <div class="day-title">
+        <span>🐓</span><h2>Day 3・賦歸收尾</h2><span class="date">07.19 日</span>
+      </div>
+      <p class="day-desc">茶壺雞 → 平安回家</p>
+
+      <div class="stop">
+        <div class="stop-top"><span class="ic">🍲</span><p class="stop-name">關子嶺茶壺雞 加祿分店</p><span class="badge">13:00 用餐</span></div>
+        <div class="stop-meta">
+          <span>📍 屏東縣枋山鄉加祿路153-1號</span>
+          <span>☎️ 0988-031-255</span>
+          <span>⏰ 10:00–21:00</span>
+        </div>
+        <div class="stop-links"><a href="https://www.instagram.com/p/C3URtPUv7ta/" target="_blank" rel="noopener">Instagram ✦</a></div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="l1">🙏 祝 大 家 旅 途 順 心 呷 飽 呷 好 🙏</div>
+  <div class="badge-logo">✨感恩惜福✨</div>
+</footer>
+
+<script>
+const starsContainer = document.getElementById('stars');
+const glyphs = ['✦','✧','✨','⋆','🌟','💫'];
+for(let i=0;i<40;i++){
+  const s = document.createElement('div');
+  s.className = 'star';
+  s.textContent = glyphs[Math.floor(Math.random()*glyphs.length)];
+  s.style.left = Math.random()*100+'%';
+  s.style.top = Math.random()*100+'%';
+  s.style.fontSize = (8+Math.random()*16)+'px';
+  s.style.animationDelay = (Math.random()*2)+'s';
+  starsContainer.appendChild(s);
+}
+</script>
+
+</body>
+</html>
